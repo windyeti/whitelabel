@@ -1,0 +1,7 @@
+.idea/
+.DS_Store/
+node_modules/
+_work/
+build/
+.gulp-scss-cache
+src/.DS_Store

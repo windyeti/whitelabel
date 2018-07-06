@@ -1,0 +1,19 @@
+mixin menu(items)
+    ul.menu__items.d-none.d-md-block
+        each item in items
+            each value, key in item
+                if key === 'main'
+                    li.menu__item.menu__item_active
+                        a(href='#' + key).menu__link= value
+                else
+                    li.menu__item
+                        a(href='#' + key).menu__link= value
+    ul.menu__items_mob.d-md-none
+        each item in items
+            each value, key in item
+                if key === 'main'
+                    li.menu__item_mob.menu__item_active
+                        a(href='#' + key).menu__link= value
+                else
+                    li.menu__item_mob
+                        a(href='#' + key).menu__link_mob= value

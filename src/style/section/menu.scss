@@ -1,0 +1,37 @@
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.menu__items {
+  list-style: none;
+  padding-top: 20px;
+  padding-left: 0;
+  margin: 0 auto;
+  width: 90%;
+  font-family: 'Proxima Nova Lt', Helvetica, sans-serif;
+  font-size: 22px;
+  color: $lightseawave;
+}
+.menu__item {
+  float: left;
+  width: 20%;
+  text-align: center;
+  &_active {
+    border-bottom: 1px solid $lightseawave;
+  }
+  &:hover {
+    border-bottom: 1px solid $dark;
+  }
+}
+.menu__link {
+  display: block;
+  padding: 10px;
+  font-size: 80%;
+  color: $lightseawave;
+  &:hover {
+    text-decoration: none;
+    color: $dark;
+  }
+}
