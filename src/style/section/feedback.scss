@@ -11,11 +11,13 @@
   margin-top: 40px;
 }
 .form__submit {
-  color: $beje;
-  background: $dark;
+  color: $dark;
+  background: $lightseawave;
+  transition: all .3s;
   &:hover {
     cursor: pointer;
-    background: $semidark;
+    background: $dark;
+    color: #FFF;
   }
   &:active {
     background: $beje;

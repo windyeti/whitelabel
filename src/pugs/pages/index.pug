@@ -4,7 +4,7 @@ block title
     title White Label
 
 block header
-    .header
+    #main.header
         .container-fluid
             .header__container.row.justify-content-center
                 .header__logo.col-lg-6.align-self-center
@@ -13,14 +13,14 @@ block header
                 .menu
                     +menu(menuItems)
 block about
-    .about
+    #about.about
         .container-fluid
             .about__container.container.row.justify-content-center
                 h2.about__head.head.col-12 О нас
                 p.about__text.text.col-lg-8 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid blanditiis consequuntur corporis delectus dolores earum id inventore, quibusdam sit soluta. Ab alias cupiditate dolores eos esse, fuga nam nostrum nulla porro quisquam quod quos reiciendis tempora temporibus ut voluptas voluptatum. Adipisci alias aliquid commodi deserunt dolor explicabo facere, natus nobis nostrum, odit quidem repudiandae sapiente. Assumenda dicta earum inventore quia quidem repellendus? Ad aperiam at cum doloremque error explicabo fuga inventore iure, nam necessitatibus nostrum officiis omnis quibusdam repellat reprehenderit sapiente sint soluta suscipit ullam voluptas. Beatae corporis error laudantium nisi qui. Autem delectus ea error eum, fugiat hic ipsam libero molestias nam nobis odio odit optio porro quaerat quia quibusdam repellat sed. A aut distinctio, dolore doloremque eveniet non quo rem vel voluptatibus. Aliquam cum, placeat quam quasi quibusdam quisquam ratione rerum saepe sed sit sunt, ullam vel.
                 p.about__text.text.col-lg-8 Accusamus aliquam animi, consequatur cum deleniti dolor ducimus ea enim ex, exercitationem fuga id illo impedit maxime molestiae molestias odit officia provident quidem quos ut veniam vitae voluptatem! Alias animi, enim eos eum impedit iste itaque iusto laborum necessitatibus nobis quidem quos repellendus saepe sequi unde vero?
 block tools
-    .tools
+    #tools.tools
         .container-fluid
           .tools__container.container.row
               .tools__head.head Инструменты
@@ -34,7 +34,7 @@ block tools
                   +tool({'head': 'Dev', 'src': 'dev', 'text': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit'})
                   +tool({'head': 'Production', 'src': 'production', 'text': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit'})
 block customers
-    .customers
+    #customers.customers
         .customer_bkg
             .customers__head.head Клиенты
         .container-fluid
@@ -42,7 +42,7 @@ block customers
                 .customers__list.row
                     +customers(customers)
 block form
-    .feedback
+    #contact.feedback
         .container-fluid
             .container.container_feedback
                 .form__head.head Связаться с нами
@@ -62,7 +62,7 @@ block footer
                 .col-sd-12.col-md-4
                     .footer__logo
                         img(src='images/logo_whitelabel.svg').footer__img
-                    .footer__email whitelabel@info.com
+                    a(href='mailto:whitelabel@info.com').footer__email whitelabel@info.com
                     .footer__phone +7 495 223 22 63
                 .col-sd-12.col-md-4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus dolore dolorem doloremque explicabo fuga itaque libero minima, modi mollitia numquam omnis pariatur, soluta, vel vero!
                 .col-sd-12.col-md-4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum non, nulla! A ad assumenda autem deserunt explicabo fugit maxime minima nisi pariatur quo, saepe similique. Itaque modi molestiae quae vitae! Alias asperiores autem beatae, eaque et eum iure nulla optio quae quam, repellendus, tempore unde! Corporis esse nesciunt officiis sit?

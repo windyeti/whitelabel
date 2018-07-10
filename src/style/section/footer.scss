@@ -2,6 +2,7 @@
   background: $dark;
   color: $gray;
   border-bottom: 20px solid $lightdark;
+  font-size: 80%;
 }
 .footer__logo {
   padding-bottom: 20px;
@@ -12,4 +13,10 @@
 .footer__email, .footer__phone {
   font-size: 120%;
   color: #FFF;
+}
+.footer__email {
+  &:hover {
+    color: $beje;
+    text-decoration: none;
+  }
 }
