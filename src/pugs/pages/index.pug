@@ -41,5 +41,31 @@ block customers
             .customers__container.container
                 .customers__list.row
                     +customers(customers)
+block form
+    .feedback
+        .container-fluid
+            .container.container_feedback
+                .form__head.head Связаться с нами
+                    .form-row
+                        .col-sm-12.col-md-3
+                            input(type='text' placeholder='Телефон' name='phone').form-control
+                        .col-sm-12.col-md-3
+                            input(type='text' placeholder='E-mail' name='email').form-control
+                        .col-sm-12.col-md-3
+                            input(type='text' placeholder='Имя' name='name').form-control
+                        .col-sm-12.col-md-3
+                            input(type='submit').form__submit.form-control
+block footer
+    footer.footer
+        .container-fluid
+            .footer__container.container.row
+                .col-sd-12.col-md-4
+                    .footer__logo
+                        img(src='images/logo_whitelabel.svg').footer__img
+                    .footer__email whitelabel@info.com
+                    .footer__phone +7 495 223 22 63
+                .col-sd-12.col-md-4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus dolore dolorem doloremque explicabo fuga itaque libero minima, modi mollitia numquam omnis pariatur, soluta, vel vero!
+                .col-sd-12.col-md-4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum non, nulla! A ad assumenda autem deserunt explicabo fugit maxime minima nisi pariatur quo, saepe similique. Itaque modi molestiae quae vitae! Alias asperiores autem beatae, eaque et eum iure nulla optio quae quam, repellendus, tempore unde! Corporis esse nesciunt officiis sit?
+
 
 

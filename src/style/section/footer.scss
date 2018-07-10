@@ -1,0 +1,15 @@
+.footer {
+  background: $dark;
+  color: $gray;
+  border-bottom: 20px solid $lightdark;
+}
+.footer__logo {
+  padding-bottom: 20px;
+}
+.footer__img {
+  width: 100%;
+}
+.footer__email, .footer__phone {
+  font-size: 120%;
+  color: #FFF;
+}

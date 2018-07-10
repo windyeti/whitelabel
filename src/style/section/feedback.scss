@@ -1,0 +1,27 @@
+.feedback {
+  background: $seawave;
+}
+.container_feedback {
+  padding-bottom: 20px;
+}
+.form__head {
+  color: #FFF;
+}
+.form-row {
+  margin-top: 40px;
+}
+.form__submit {
+  color: $beje;
+  background: $dark;
+  &:hover {
+    cursor: pointer;
+    background: $semidark;
+  }
+  &:active {
+    background: $beje;
+  }
+}
+.form-control {
+  margin: 5px 0;
+  border: none;
+}
