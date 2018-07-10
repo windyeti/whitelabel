@@ -6,6 +6,7 @@ var plumber = require('gulp-plumber');
 var browserSync = require('browser-sync');
 var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant');
+var rigger = require('gulp-rigger');
 
 var path = {
     build : {
@@ -13,21 +14,24 @@ var path = {
         css : './build/css',
         image : './build/images',
         font : './build/fonts',
-        favicon : './build'
+        favicon : './build',
+        js : './build/js'
     },
     src : {
         pug : './src/pugs/pages/*.pug',
         scss : './src/style/main.scss',
         image : './src/images/*.*',
         font : './src/fonts/*.*',
-        favicon : './src/*.*'
+        favicon : './src/*.*',
+        js : './src/js/main.js'
     },
     watch : {
         pug : './src/pugs/**/*.pug',
         scss : './src/style/**/*.scss',
         image : './src/images/*.*',
         font : './src/fonts/*.*',
-        favicon : './src/*.*'
+        favicon : './src/*.*',
+        js : './src/js/**/*.js'
     }
 };
 gulp.task('server', function() {
@@ -71,6 +75,12 @@ gulp.task('build:image', function () {
         .pipe(gulp.dest(path.build.image))
         .pipe(browserSync.reload({stream: true}))
 });
+gulp.task('build:js', function() {
+   gulp.src(path.src.js)
+        .pipe(rigger())
+        .pipe(gulp.dest(path.build.js))
+        .pipe(browserSync.reload({stream: true}))
+});
 gulp.task('watch', function() {
     watch(path.watch.pug, function() {
         gulp.start('build:pug')
@@ -87,7 +97,10 @@ gulp.task('watch', function() {
     watch(path.watch.font, function() {
         gulp.start('build:font')
     });
+    watch(path.watch.js, function() {
+        gulp.start('build:js')
+    });
 });
 
-gulp.task('build', ['build:pug', 'build:scss', 'build:image', 'build:favicon']);
+gulp.task('build', ['build:pug', 'build:scss', 'build:image', 'build:favicon', 'build:font', 'build:js']);
 gulp.task('default', ['build', 'server', 'watch']);

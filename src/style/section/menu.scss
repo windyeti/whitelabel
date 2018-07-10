@@ -11,7 +11,7 @@
   margin: 0 auto;
   width: 90%;
   font-family: 'Proxima Nova Lt', Helvetica, sans-serif;
-  font-size: 22px;
+  font-size: 137.5%;
   color: $lightseawave;
 }
 .menu__item {
@@ -34,4 +34,17 @@
     text-decoration: none;
     color: $dark;
   }
+}
+
+.menu_scroll {
+  z-index: 1000;
+  position: fixed;
+  background: #FFF;
+}
+.menu__items_scroll {
+  padding-top: 5px;
+  font-size: 100%;
+}
+.menu__link_scroll {
+  color: $gray;
 }
