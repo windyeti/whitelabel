@@ -1,0 +1,27 @@
+.customers {
+  max-width: 1920px;
+  color: #FFF;
+}
+.customer_bkg {
+  background: $dark;
+  border-bottom: 15px solid $lightdark;
+}
+.customers__container {
+  padding-top: 0;
+  margin-top: -60px;
+}
+.customers__head {
+  padding: 60px 0;
+}
+.customers__list {
+  padding: 40px 0;
+  background: #FFF;
+  //width: 100%;
+}
+.customers__customer {
+  margin: 0 20px;
+  width: 100px;
+  height: 60px;
+}
+$cust : volkswagen, x5_retail_group, fifa2018, tigi;
+@include logo_customers($cust)

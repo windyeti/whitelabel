@@ -1,0 +1,25 @@
+@mixin tools($items) {
+  $count : 0;
+  @each $item in $items {
+    .tool__icon_#{$item} {
+      background: url('../images/icon-tools.svg') $count -60px no-repeat;
+      &:hover {
+        background: url('../images/icon-tools.svg') $count 0px no-repeat;
+      }
+    };
+    $count : $count - 100px;
+  };
+};
+
+@mixin logo_customers($items) {
+  $count : 0;
+  @each $item in $items {
+    .customers__customer_#{$item} {
+      background: url('../images/logo-customers.jpg') $count -60px no-repeat;
+      &:hover {
+        background: url('../images/logo-customers.jpg') $count 0px no-repeat;
+      }
+    };
+    $count : $count - 100px;
+  };
+};

@@ -15,15 +15,31 @@ block header
 block about
     .about
         .container-fluid
-            .about__container.container.row
-                h2.about__head.head О нас
-                p.about__text.text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid blanditiis consequuntur corporis delectus dolores earum id inventore, quibusdam sit soluta. Ab alias cupiditate dolores eos esse, fuga nam nostrum nulla porro quisquam quod quos reiciendis tempora temporibus ut voluptas voluptatum. Adipisci alias aliquid commodi deserunt dolor explicabo facere, natus nobis nostrum, odit quidem repudiandae sapiente. Assumenda dicta earum inventore quia quidem repellendus? Ad aperiam at cum doloremque error explicabo fuga inventore iure, nam necessitatibus nostrum officiis omnis quibusdam repellat reprehenderit sapiente sint soluta suscipit ullam voluptas. Beatae corporis error laudantium nisi qui. Autem delectus ea error eum, fugiat hic ipsam libero molestias nam nobis odio odit optio porro quaerat quia quibusdam repellat sed. A aut distinctio, dolore doloremque eveniet non quo rem vel voluptatibus. Aliquam cum, placeat quam quasi quibusdam quisquam ratione rerum saepe sed sit sunt, ullam vel.
-                p.about__text.text Accusamus aliquam animi, consequatur cum deleniti dolor ducimus ea enim ex, exercitationem fuga id illo impedit maxime molestiae molestias odit officia provident quidem quos ut veniam vitae voluptatem! Alias animi, enim eos eum impedit iste itaque iusto laborum necessitatibus nobis quidem quos repellendus saepe sequi unde vero?
+            .about__container.container.row.justify-content-center
+                h2.about__head.head.col-12 О нас
+                p.about__text.text.col-lg-8 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid blanditiis consequuntur corporis delectus dolores earum id inventore, quibusdam sit soluta. Ab alias cupiditate dolores eos esse, fuga nam nostrum nulla porro quisquam quod quos reiciendis tempora temporibus ut voluptas voluptatum. Adipisci alias aliquid commodi deserunt dolor explicabo facere, natus nobis nostrum, odit quidem repudiandae sapiente. Assumenda dicta earum inventore quia quidem repellendus? Ad aperiam at cum doloremque error explicabo fuga inventore iure, nam necessitatibus nostrum officiis omnis quibusdam repellat reprehenderit sapiente sint soluta suscipit ullam voluptas. Beatae corporis error laudantium nisi qui. Autem delectus ea error eum, fugiat hic ipsam libero molestias nam nobis odio odit optio porro quaerat quia quibusdam repellat sed. A aut distinctio, dolore doloremque eveniet non quo rem vel voluptatibus. Aliquam cum, placeat quam quasi quibusdam quisquam ratione rerum saepe sed sit sunt, ullam vel.
+                p.about__text.text.col-lg-8 Accusamus aliquam animi, consequatur cum deleniti dolor ducimus ea enim ex, exercitationem fuga id illo impedit maxime molestiae molestias odit officia provident quidem quos ut veniam vitae voluptatem! Alias animi, enim eos eum impedit iste itaque iusto laborum necessitatibus nobis quidem quos repellendus saepe sequi unde vero?
 block tools
-        .tools
-            .container-fluid
-              .tools__container.container.row
-                  .tools__head.head Инструменты
-                  p.tools__text.text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium animi, aperiam assumenda atque eius eligendi facere impedit modi, obcaecati perspiciatis qui quibusdam reprehenderit sint tenetur voluptatem! Ad aut dolorum est nam nisi qui quibusdam similique sit vero voluptate. Amet autem corporis dolorum, eveniet neque possimus quae. Nobis repudiandae unde veritatis.
+    .tools
+        .container-fluid
+          .tools__container.container.row
+              .tools__head.head Инструменты
+              p.tools__text.text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium animi, aperiam assumenda atque eius eligendi facere impedit modi, obcaecati perspiciatis qui quibusdam reprehenderit sint tenetur voluptatem! Ad aut dolorum est nam nisi qui quibusdam similique sit vero voluptate. Amet autem corporis dolorum, eveniet neque possimus quae. Nobis repudiandae unde veritatis.
+              .tools__items.row
+                  +tool({'head': 'Events', 'src': 'event', 'text': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit'})
+                  +tool({'head': 'Social', 'src': 'social', 'text': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit'})
+                  +tool({'head': 'Dev', 'src': 'dev', 'text': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit'})
+                  +tool({'head': 'Production', 'src': 'production', 'text': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit'})
+                  +tool({'head': 'Social', 'src': 'social', 'text': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit'})
+                  +tool({'head': 'Dev', 'src': 'dev', 'text': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit'})
+                  +tool({'head': 'Production', 'src': 'production', 'text': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit'})
+block customers
+    .customers
+        .customer_bkg
+            .customers__head.head Клиенты
+        .container-fluid
+            .customers__container.container
+                .customers__list.row
+                    +customers(customers)
 
 
